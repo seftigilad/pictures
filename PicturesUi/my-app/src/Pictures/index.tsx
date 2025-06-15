@@ -6,6 +6,7 @@ import React from "react";
 import { Picture } from "../Picture";
 export const Pictures = (props) => {
   const [pictures, setPictures] = React.useState<Picture[]>([]);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState<{
     name: string;
     description: string;
@@ -74,7 +75,6 @@ export const Pictures = (props) => {
     }
   };
 
-  const [error, setError] = useState("");
   return (
     <div style={{ padding: "20px" }}>
       <h2>Picture Album</h2>
